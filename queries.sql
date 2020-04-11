@@ -18,9 +18,11 @@ FROM [CUSTOMERS]
 WHERE City = 'Madrid' OR City = 'London' OR Country = 'Brazil'
 ORDER BY City ASC;
 -- Add a customer record for "The Shire", the contact name is "Bilbo Baggins" the address is -"1 Hobbit-Hole" in "Bag End", postal code "111" and the country is "Middle Earth"
-
+INSERT INTO [CUSTOMERS]
+VALUES
 -- Update Bilbo Baggins record so that the postal code changes to "11122"
-
+INSERT INTO CUSTOMERS
+VALUES (92, "The Shire", "Bilbo Baggins", "1 Hobbit-Hole", "Bag End", 111, "Middle Earth")
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
 
 -- (Stretch) Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name
